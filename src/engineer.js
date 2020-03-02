@@ -1,8 +1,9 @@
-modules.export = class Employee {
-    constructor(name, id, email) {
-        this._id = id;
-        this._name = name;
-        this._email = email;
+const employee = require("./employee");
+modules.export = class Engineer extends employee {
+    constructor(name, id, email, title, github) {
+        super(name, id, email)
+        this._github 
+       
     }
 
     getName() {
@@ -14,6 +15,7 @@ modules.export = class Employee {
     getEmail(){
         return this._email;
     }
+    
     getRole(){
         return this.constructor.name;
     }
