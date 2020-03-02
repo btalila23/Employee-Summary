@@ -5,13 +5,13 @@ modeules.export = class Employee {
         this._title = title
     }
 
-    _getId() {
+    getId() {
         return this._id;
     }
-    _getName(){
+    getName(){
         return this._name;
     }
-    _getTitle(){
+    getTitle(){
         return this._title;
     }
 }
