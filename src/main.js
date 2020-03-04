@@ -25,4 +25,21 @@ class Main {
 		const result = Main._templateStart + teamHTMLString + Main._templateEnd;
 
 		await writeFileAsync(path.resolve(__dirname, '..', 'dist', 'easy.html'), result);
+    }
+    async run() {
+
+
+		this._teamArray = [
+			new Engineer('engineer name', 'engineer email', 'engineer github'),
+			new Intern('intern name', 'intern email', 'intern school'),
+			new Manager('manager name', 'manager email', 'manager room number'),
+		]
+
+		await this._easy();
 	}
+}
+
+Main._ENGINEER = 'engineer';
+Main._INTERN = 'intern';
+Main._MANAGER = 'manager';
+
